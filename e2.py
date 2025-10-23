@@ -8,10 +8,6 @@ def find_intersections(street1, street2):
     # Получение всех улиц в графе
     streets = ox.graph_to_gdfs(G, nodes=False, edges=True)
 
-    # for street in streets['name']:
-    #     print(street)
-
-    # Удаление строк с NaN в столбце 'name'
     streets = streets[streets['name'].notna()]
 
     # Фильтрация улиц по названиям
